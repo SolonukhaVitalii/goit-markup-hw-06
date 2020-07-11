@@ -22,6 +22,10 @@ body {
     letter-spacing: 0.03em;
 }
 
+.textarea {
+    resize: none;
+}
+
 .list {
     display: flex;
     padding-top: 0;
@@ -114,10 +118,6 @@ a:hover .icon {
 
 .site-nav .link:hover,
 .site-nav .link:focus {
-    color: var(--accent-color);
-}
-
-.site-nav .link .current {
     color: var(--accent-color);
 }
 
