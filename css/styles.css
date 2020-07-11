@@ -22,10 +22,6 @@ body {
     letter-spacing: 0.03em;
 }
 
-.textarea {
-    resize: none;
-}
-
 .list {
     display: flex;
     padding-top: 0;
@@ -248,6 +244,87 @@ a:hover .icon {
 .button.secondary {
     color: var(--accent-color);
     background-color: var(--primary-white-color);
+}
+
+.form {
+    width: 528px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    background-color: var(--primary-white-color);
+}
+
+.form-title {
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--title-text-color);
+}
+
+.form-field {
+    outline: 1px solid var(--title-text-color);
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    transform: translateY(-50%);
+    color: var(--primary-text-color);
+    transition: transform 250ms linear;
+}
+
+.form-input {
+    width: 100%;
+    margin: 0;
+    padding: 12px 18px;
+    border-radius: 1px;
+    border: 1px solid var(--primary-text-color);
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    color: var(--accent-color);
+    transform: translateY(-50px);
+}
+
+.form-input:placeholder-shown {
+    background-color: var(--primary-white-color);
+}
+
+.form-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+    background-color: var(--primary-white-color);
+}
+
+.form-input:focus ~ .form-icon {
+    fill: var(--accent-color);
+}
+
+.textarea {
+    resize: none;
+}
+
+.comment {
+    padding: 12px;
+    max-width: 448px;
+    max-height: 120px;
+}
+
+.checkbox {
+    width: 426px;
+    height: 24px;
 }
 
 .container-mesedg {
