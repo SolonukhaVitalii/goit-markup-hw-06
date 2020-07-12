@@ -248,12 +248,13 @@ a:hover .icon {
 
 /*Модалка*/
 
-.backdrop {
-    transition: 250ms var(--timing-function);
-}
 
-.is-hidden {
+.backdrop.is-hidden {
     visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: 250ms var(--timing-function);
+    z-index: -1;
 }
 
 .form {
@@ -285,10 +286,6 @@ a:hover .icon {
     top: 0;
     left: 5px;
     transform: translateY(30%);
-}
-
-.close:focus + .icon-close {
-    fill: var(--accent-color);
 }
 
 .form-title {
@@ -331,6 +328,11 @@ a:hover .icon {
 
 .form-input:placeholder-shown {
     background-color: var(--primary-white-color);
+}
+
+.form-label:focus-within .form-input{
+    border-color: var(--accent-color);
+    outline:none;
 }
 
 .form-icon {
