@@ -71,16 +71,16 @@
                         </svg>
                     </div>
                     <div class="field-textarea">
+                        <textarea name="comment" id="comment" rows="15" placeholder=" " class="comment textarea" placeholder=""></textarea>
                         <label for="comment" class="form-textarea">Комментарий</label>
-                        <textarea name="comment" id="comment" rows="15" class="comment textarea" placeholder=""></textarea>
                     </div>
-                    <div>
-                        <label for="policy" class="checkbox-text">Соглашаюсь с рассылкой и принимаю<a href="">Условия договора</a>
-                            <input type="checkbox" name="" id="policy" class="checkbox">
+                    <div class="checkbox-box">
+                        <label for="policy" class="checkbox-text">Соглашаюсь с рассылкой и принимаю<a href="" class="doc"> Условия договора</a>
+                            <input type="checkbox" name="checkbox" id="policy" class="checkbox">
                             <span class="icon-box"></span>
-                        </label> 
+                        </label>
                     </div>
-                    <button type="submit" class="button">Отправить</button>
+                    <button type="submit" class="button form-button">Отправить</button>
                 </form>
             </div>
         <section>
@@ -390,9 +390,11 @@
             <div>
                 <form class="forms">
                     <div class="forms-mail">
+                        <div class="forms-mails">
                         <h3 class="footer-title mails">Подпишитесь на рассылку</h3>
                         <input class="forms-input" type="email" name="email" placeholder="E-mail" />
-                        <button type="submit" class="buttons">Подписаться
+                        </div>
+                        <button type="submit" class="buttons submit">Подписаться
                             <svg class="icon-send" width="24" height="24">
                                 <use href="./images/sprite.svg#send"></use>
                             </svg> 
