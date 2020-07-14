@@ -249,23 +249,28 @@ a:hover .icon {
 /*Модалка*/
 
 
-.backdrop.is-hidden {
+.backdrop {
+    position: fixed;
+    top: 222px;
+    left: 690px;
+    width: 528px;
+    height: 581px;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    background-color: var(--primary-white-color);
+}
+
+.is-hidden {
     visibility: hidden;
     opacity: 0;
-    transform: scale(0);
-    transition: 250ms var(--timing-function);
-    z-index: -1;
+    pointer-events: visible;
 }
 
 .form {
-    width: 528px;
     margin-left: auto;
     margin-right: auto;
     padding: 40px;
-    background-color: var(--primary-white-color);
     position: relative;
-    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
 }
 
 .close {
@@ -306,31 +311,35 @@ a:hover .icon {
     position: absolute;
     top: 50%;
     left: 42px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: var(--primary-text-color);
     transform: translateY(-50%);
-    color: var(--title-text-color);
     transition: transform var(--timing), var(--timing-function);
 }
 
 .form-input {
     width: 100%;
-    margin: 0;
     padding: 12px 18px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .form-input:focus + .form-label,
 .form-input:not(:placeholder-shown) + .form-label {
     color: var(--accent-color);
-    transform: translateY(-50px);
+    transform: translateY(-40px);
+    margin-left: -30px;
 }
 
 .form-input:placeholder-shown {
     background-color: var(--primary-white-color);
 }
 
-.form-label:focus-within .form-input{
+.form-label:focus-within .form-input {
     border-color: var(--accent-color);
     outline:none;
 }
@@ -339,7 +348,6 @@ a:hover .icon {
     position: absolute;
     top: 50%;
     left: 16px;
-
     display: inline-block;
     width: 18px;
     height: 18px;
@@ -360,29 +368,38 @@ a:hover .icon {
     position: absolute;
     top: 20%;
     left: 16px;
-    transform: translateY(-60%);
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
     color: var(--primary-text-color);
+    transform: translateY(-50%);
     transition: transform var(--timing), var(--timing-function);
-}
-
-.comment:focus + .form-textarea,
-.comment:focus:not(:placeholder-shown) + .form-textarea {
-    color: var(--accent-color);
-    transform: translateY(-50px);
-}
-
-.comment:placeholder-shown {
-    background-color: var(--primary-white-color);
 }
 
 .comment {
     width: 448px;
     height: 120px;
     padding: 12px 16px;
-    margin: 0;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
+    cursor: pointer;
+}
+
+.comment:focus + .form-textarea,
+.comment:not(:placeholder-shown) + .form-textarea {
+    color: var(--accent-color);
+    transform: translateY(-45px);
+    margin-left: 0;
+}
+
+.comment:placeholder-shown {
+    background-color: var(--primary-white-color);
+}
+
+.form-textarea:focus-within .comment {
+    border-color: var(--accent-color);
+    outline:none;
 }
 
 .textarea {
@@ -442,6 +459,7 @@ a:hover .icon {
 .form-button {
     margin-left: 125px;
     margin-top: 30px;
+    cursor: pointer;
 }
 /*Модалка*/
 
@@ -751,10 +769,6 @@ a:hover .icon {
     width: 570px;
     height: 86px;
     margin-left: 94px;
-}
- 
-.forms-mail {
-    display: flex; 
 }
 
 .forms-mails {
