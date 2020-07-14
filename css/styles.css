@@ -251,10 +251,10 @@ a:hover .icon {
 
 .backdrop {
     position: fixed;
-    top: 222px;
-    left: 690px;
     width: 528px;
     height: 581px;
+    top: 222px;
+    left: 690px;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
     background-color: var(--primary-white-color);
@@ -293,6 +293,10 @@ a:hover .icon {
     transform: translateY(30%);
 }
 
+.close:focus .icon-close {
+    fill: var(--accent-color);
+}
+
 .form-title {
     margin-bottom: 30px;
     font-style: normal;
@@ -316,7 +320,6 @@ a:hover .icon {
     letter-spacing: 0.01em;
     color: var(--primary-text-color);
     transform: translateY(-50%);
-    transition: transform var(--timing), var(--timing-function);
 }
 
 .form-input {
@@ -333,6 +336,7 @@ a:hover .icon {
     color: var(--accent-color);
     transform: translateY(-40px);
     margin-left: -30px;
+    transition-duration: 250ms;
 }
 
 .form-input:placeholder-shown {
@@ -340,8 +344,8 @@ a:hover .icon {
 }
 
 .form-label:focus-within .form-input {
+    outline: none;
     border-color: var(--accent-color);
-    outline:none;
 }
 
 .form-icon {
@@ -391,6 +395,7 @@ a:hover .icon {
     color: var(--accent-color);
     transform: translateY(-45px);
     margin-left: 0;
+    transition-duration: 250ms;
 }
 
 .comment:placeholder-shown {
